@@ -1,0 +1,136 @@
+object Form1: TForm1
+  Left = 325
+  Height = 509
+  Top = 145
+  Width = 743
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'NonLinear parameter 01 12052026'
+  ClientHeight = 509
+  ClientWidth = 743
+  Position = poWorkAreaCenter
+  LCLVersion = '4.6.0.0'
+  OnCreate = FormCreate
+  object chPoints: TChart
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 509
+    Top = 0
+    Width = 432
+    AutoFocus = True
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Extent.UseXMax = True
+    Extent.UseXMin = True
+    Extent.UseYMax = True
+    Extent.UseYMin = True
+    Extent.XMax = 10
+    Extent.YMax = 100
+    ExtentSizeLimit.UseXMax = True
+    ExtentSizeLimit.UseXMin = True
+    ExtentSizeLimit.UseYMax = True
+    ExtentSizeLimit.UseYMin = True
+    ExtentSizeLimit.XMax = 10
+    ExtentSizeLimit.YMax = 100
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Margins.Left = 8
+    Margins.Top = 8
+    Margins.Right = 8
+    Margins.Bottom = 8
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ctPoints
+    Align = alCustom
+    Anchors = [akTop, akLeft, akBottom]
+    DoubleBuffered = True
+    object chPointsLineSeries1: TLineSeries
+      Marks.Clipped = False
+      Marks.Format = '%0:.9g'
+      Marks.Style = smsValue
+      Pointer.Brush.Color = clPurple
+      Pointer.HorizSize = 6
+      Pointer.Style = psDiamond
+      Pointer.VertSize = 6
+      Pointer.Visible = True
+      ShowPoints = True
+    end
+  end
+  object Label1: TLabel
+    Left = 440
+    Height = 13
+    Top = 8
+    Width = 27
+    Caption = '# X:Y'
+  end
+  object Button1: TButton
+    Left = 456
+    Height = 39
+    Top = 352
+    Width = 120
+    Caption = 'Linear ramp up'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 456
+    Height = 39
+    Top = 400
+    Width = 120
+    Caption = 'Nonlinear ramp up'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 592
+    Height = 39
+    Top = 400
+    Width = 120
+    Caption = 'Nonlinear ramp down'
+    TabOrder = 3
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 592
+    Height = 39
+    Top = 448
+    Width = 120
+    Caption = 'Nonlinear ramp down'
+    TabOrder = 4
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 592
+    Height = 39
+    Top = 352
+    Width = 120
+    Caption = 'Linear ramp down'
+    TabOrder = 5
+    OnClick = Button5Click
+  end
+  object ctPoints: TChartToolset
+    Left = 155
+    Top = 184
+    object ctPointsDataPointDragTool1: TDataPointDragTool
+      Shift = [ssLeft]
+      OnAfterMouseUp = ctPointsDataPointDragTool1AfterMouseUp
+      GrabRadius = 10
+      ActiveCursor = crDrag
+    end
+  end
+end
