@@ -1,13 +1,13 @@
 object Form1: TForm1
   Left = 325
-  Height = 509
+  Height = 671
   Top = 145
-  Width = 743
+  Width = 918
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'NonLinear parameter 01 12052026'
-  ClientHeight = 509
-  ClientWidth = 743
+  ClientHeight = 671
+  ClientWidth = 918
   Position = poWorkAreaCenter
   LCLVersion = '4.6.0.0'
   OnCreate = FormCreate
@@ -57,7 +57,6 @@ object Form1: TForm1
     )
     Toolset = ctPoints
     Align = alCustom
-    Anchors = [akTop, akLeft, akBottom]
     DoubleBuffered = True
     object chPointsLineSeries1: TLineSeries
       Marks.Clipped = False
@@ -71,57 +70,518 @@ object Form1: TForm1
       ShowPoints = True
     end
   end
-  object Label1: TLabel
-    Left = 440
-    Height = 13
-    Top = 8
-    Width = 27
-    Caption = '# X:Y'
-  end
   object Button1: TButton
-    Left = 456
+    Left = 72
     Height = 39
-    Top = 352
+    Top = 528
     Width = 120
     Caption = 'Linear ramp up'
     TabOrder = 1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 456
+    Left = 72
     Height = 39
-    Top = 400
+    Top = 576
     Width = 120
     Caption = 'Nonlinear ramp up'
     TabOrder = 2
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 592
+    Left = 208
     Height = 39
-    Top = 400
+    Top = 576
     Width = 120
     Caption = 'Nonlinear ramp down'
     TabOrder = 3
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 592
+    Left = 208
     Height = 39
-    Top = 448
+    Top = 624
     Width = 120
     Caption = 'Nonlinear ramp down'
     TabOrder = 4
     OnClick = Button4Click
   end
   object Button5: TButton
-    Left = 592
+    Left = 208
     Height = 39
-    Top = 352
+    Top = 528
     Width = 120
     Caption = 'Linear ramp down'
     TabOrder = 5
     OnClick = Button5Click
+  end
+  object ListBox1: TListBox
+    Left = 440
+    Height = 360
+    Top = 8
+    Width = 225
+    ItemHeight = 0
+    TabOrder = 6
+    OnClick = ListBox1Click
+  end
+  object Edit61: TEdit
+    Left = 448
+    Height = 24
+    Top = 400
+    Width = 225
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 30
+    ParentFont = False
+    TabOrder = 7
+  end
+  object Edit62: TEdit
+    Left = 448
+    Height = 24
+    Top = 480
+    Width = 225
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 30
+    ParentFont = False
+    TabOrder = 8
+  end
+  object Button6: TButton
+    Left = 696
+    Height = 29
+    Top = 400
+    Width = 98
+    Caption = 'Rename'
+    TabOrder = 9
+    OnClick = Button6Click
+  end
+  object Button7: TButton
+    Left = 696
+    Height = 29
+    Top = 480
+    Width = 98
+    Caption = 'New Copy'
+    TabOrder = 10
+    OnClick = Button7Click
+  end
+  object Button8: TButton
+    Left = 696
+    Height = 29
+    Top = 440
+    Width = 98
+    Caption = 'Delete'
+    TabOrder = 11
+    OnClick = Button8Click
+  end
+  object ClearName1: TButton
+    Left = 808
+    Height = 29
+    Top = 480
+    Width = 98
+    Caption = 'ClearName'
+    TabOrder = 12
+    OnClick = ClearName1Click
+  end
+  object Button11: TButton
+    Left = 448
+    Height = 29
+    Top = 440
+    Width = 98
+    Caption = 'Refresh'
+    TabOrder = 13
+    OnClick = Button11Click
+  end
+  object GroupBox3: TGroupBox
+    Left = 672
+    Height = 360
+    Top = 8
+    Width = 224
+    Caption = 'Chart Table'
+    ClientHeight = 342
+    ClientWidth = 220
+    TabOrder = 14
+    object Label50: TLabel
+      Left = 8
+      Height = 13
+      Top = 12
+      Width = 12
+      Caption = '01'
+    end
+    object Edit41: TEdit
+      AnchorSideLeft.Control = Label50
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label50
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 8
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 0
+    end
+    object Label51: TLabel
+      Left = 8
+      Height = 13
+      Top = 44
+      Width = 12
+      Caption = '02'
+    end
+    object Edit42: TEdit
+      AnchorSideLeft.Control = Label51
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label51
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 40
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 1
+    end
+    object Label52: TLabel
+      Left = 8
+      Height = 13
+      Top = 76
+      Width = 12
+      Caption = '03'
+    end
+    object Edit43: TEdit
+      AnchorSideLeft.Control = Label52
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label52
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 72
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 2
+    end
+    object Label53: TLabel
+      Left = 8
+      Height = 13
+      Top = 108
+      Width = 12
+      Caption = '04'
+    end
+    object Edit44: TEdit
+      AnchorSideLeft.Control = Label53
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label53
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 104
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 3
+    end
+    object Label54: TLabel
+      Left = 8
+      Height = 13
+      Top = 140
+      Width = 12
+      Caption = '05'
+    end
+    object Edit45: TEdit
+      AnchorSideLeft.Control = Label54
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label54
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 136
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 4
+    end
+    object Label55: TLabel
+      Left = 8
+      Height = 13
+      Top = 172
+      Width = 12
+      Caption = '06'
+    end
+    object Edit46: TEdit
+      AnchorSideLeft.Control = Label55
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label55
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 168
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 5
+    end
+    object Label56: TLabel
+      Left = 8
+      Height = 13
+      Top = 204
+      Width = 12
+      Caption = '07'
+    end
+    object Edit47: TEdit
+      AnchorSideLeft.Control = Label56
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label56
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 200
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 6
+    end
+    object Label57: TLabel
+      Left = 8
+      Height = 13
+      Top = 236
+      Width = 12
+      Caption = '08'
+    end
+    object Edit48: TEdit
+      AnchorSideLeft.Control = Label57
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label57
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 232
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 7
+    end
+    object Label58: TLabel
+      Left = 8
+      Height = 13
+      Top = 268
+      Width = 12
+      Caption = '09'
+    end
+    object Edit49: TEdit
+      AnchorSideLeft.Control = Label58
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label58
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 264
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 8
+    end
+    object Label59: TLabel
+      Left = 8
+      Height = 13
+      Top = 296
+      Width = 12
+      Caption = '10'
+    end
+    object Edit50: TEdit
+      AnchorSideLeft.Control = Label59
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label59
+      AnchorSideTop.Side = asrCenter
+      Left = 28
+      Height = 21
+      Top = 292
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 9
+    end
+    object Edit51: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label50
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 8
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 10
+    end
+    object Edit52: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label51
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 40
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 11
+    end
+    object Edit53: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label52
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 72
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 12
+    end
+    object Edit54: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label53
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 104
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 13
+    end
+    object Edit55: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label54
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 136
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 14
+    end
+    object Edit56: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label55
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 168
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 15
+    end
+    object Edit57: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label56
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 200
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 16
+    end
+    object Edit58: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label57
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 232
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 17
+    end
+    object Edit59: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label58
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 264
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 18
+    end
+    object Edit60: TEdit
+      AnchorSideLeft.Control = Edit41
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Label59
+      AnchorSideTop.Side = asrCenter
+      Left = 92
+      Height = 21
+      Top = 292
+      Width = 56
+      Alignment = taCenter
+      BorderSpacing.Left = 8
+      TabOrder = 19
+    end
+    object StringGrid1: TStringGrid
+      Left = 8
+      Height = 336
+      Top = 0
+      Width = 208
+      ColCount = 3
+      Columns = <      
+        item
+          Title.Caption = 'X'
+        end      
+        item
+          Title.Caption = 'Y'
+        end>
+      Flat = True
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+      RowCount = 11
+      TabOrder = 20
+      OnEditingDone = StringGrid1EditingDone
+    end
+  end
+  object Button9: TButton
+    Left = 808
+    Height = 29
+    Top = 400
+    Width = 98
+    Caption = 'Save'
+    TabOrder = 15
+    OnClick = Button9Click
+  end
+  object ClearName2: TButton
+    Left = 808
+    Height = 29
+    Top = 440
+    Width = 98
+    Caption = 'ClearName'
+    TabOrder = 16
+    OnClick = ClearName2Click
+  end
+  object Memo1: TMemo
+    Left = 355
+    Height = 129
+    Top = 531
+    Width = 117
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 17
+    Visible = False
   end
   object ctPoints: TChartToolset
     Left = 155
